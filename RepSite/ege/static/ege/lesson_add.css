@@ -1,0 +1,117 @@
+input[type='submit'] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 50px;
+}
+
+#main {
+    float: left;
+    weight: 50%;
+    height: 50%;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+p, h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.context {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+#middleContext {
+    margin-bottom: 15px;
+}
+
+input[type="number"] {
+	background-color: #eee;
+	vertical-align: top;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 10px;
+	display: inline-block;
+	width: 200px;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+input[type="number"]:focus {
+	outline: 2px solid green;
+}
+
+#id_is_paid {
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  padding: 10px;
+  margin-left: 10px;
+}
+
+
+#id_homework {
+    font-size: 15px;
+}
+input[type="text"] {
+	background-color: #eee;
+	vertical-align: top;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 10px;
+	display: inline-block;
+	width: 200px;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+input[type="text"]:focus {
+	outline: 2px solid green;
+}
+
+select {
+    background-color: #eee;
+}
+
+table {
+	text-align: center;
+	border-collapse: separate;
+	border-spacing: 5px;
+	background: #cccccc;
+	border: 20px solid #сссссс;
+	border-radius: 15px;
+	margin-bottom: 20px;
+
+}
+
+th {
+	font-size: 20px;
+	padding: 10px 10px 5px 10px;
+}
+
+.color1 {
+	background: #10e639;
+	text-indent: -9999px;
+
+}
+
+.color0  {
+	background: red;
+	text-indent: -9999px;
+}

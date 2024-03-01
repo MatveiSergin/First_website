@@ -1,0 +1,18 @@
+{% extends "layout/navigation.html" %}
+{% load static %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'ege/login.css' %}">{% endblock %}
+		{% block title %}Вход{% endblock %}
+		{% block content %}
+            {% if user.is_authenticated %}
+                <div id="main">Вы уже авторизированы</div>
+                <a id="GotoProfile" href="{% url 'profile'%}">Перейти на профиль</a>
+            {% else %}
+                <h1 id="Login">Вход</h1>
+                <form method="post" id="forma">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Войти</button>
+
+                </form>
+            {% endif %}
+        {% endblock %}

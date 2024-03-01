@@ -1,0 +1,38 @@
+{% extends "layout/navigation.html" %}
+{% load static %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'ege/student_add.css' %}">{% endblock %}
+		{% block title %}Добавление ученика{% endblock %}
+{% block content %}
+<div id="main">
+    <h1>Добавление ученика</h1>
+<form method="post">
+	{% csrf_token %}
+
+    <p><label class="form-label" for="{{ form.name.id_for_label }}">{{form.name.label}}: </label>{{ form.name }}</p>
+    <div class="form-error">{{ form.name.errors }}</div><br>
+
+    <p><label class="form-label" for="{{ form.subject.id_for_label }}">{{form.subject.label}}: </label>{{ form.subject }}</p>
+    <div class="form-error">{{ form.subject.errors }}</div><br>
+
+    <p><label class="form-label" for="{{ form.typeOfExam.id_for_label }}">{{form.typeOfExam.label}}: </label>{{ form.typeOfExam }}</p>
+    <div class="form-error">{{ form.typeOfExam.errors }}</div><br>
+
+    <p><label class="form-label" for="{{ form.perWeek.id_for_label }}">{{form.perWeek.label}}: </label>{{ form.perWeek }}</p>
+    <div class="form-error">{{ form.perWeek.errors }}</div><br>
+
+    <p><label class="form-label" for="{{ form.price.id_for_label }}">{{form.price.label}}: </label>{{ form.price }}</p>
+    <div class="form-error">{{ form.price.errors }}</div><br>
+
+    <p><label class="form-label" for="{{ form.solvedTask.id_for_label }}">{{form.solvedTask.label}}: </label>{{ form.solvedTask }}</p>
+    <div class="form-error">{{ form.solvedTask.errors }}</div><br>
+
+   <p><label class="form-label" id="lastLabel" for="{{ form.otherInformation.id_for_label }}">{{form.otherInformation.label}}: </label><br><br>{{ form.otherInformation }}</p>
+    <div class="form-error">{{ form.otherInformation.errors }}</div><br>
+
+    <div style="display:none;">{{ form.username }}</div>
+
+   <div style="display:none;">{{ form.password }}</div>
+
+	<input type="submit" value='Добавить' name="student_add">
+</form></div>
+{% endblock %}

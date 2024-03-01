@@ -1,0 +1,41 @@
+{% extends "layout/navigation.html" %}
+{% load static %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'ege/lesson_add.css' %}">{% endblock %}
+		{% block title %}Добавление занятия{% endblock %}
+{% block content %}
+    <div id="main">
+        <h2>Ученик: {{student.name}}</h2>
+		<p class="context" id="middleContext">Здесь можно добавить раздел занятия для ученика,
+            чтобы прекрепить домашнюю работу и материалы.
+            Не забудь заполнить формы.</p>
+		<p class="context">Разобрали новое задание? Отметь его в таблице ученика!</p>
+        <h3>Успеваемость:</h3>
+        <table>
+				<thead>
+					<tr>
+						{% for number in numberTask %}
+							<th>{{number}}</th>
+						{% endfor %}
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						{% for task in solvedTask%}
+							<td class="color{{task}}">{{task}}</td>
+						{% endfor %}
+					</tr>
+				</tbody>
+		</table>
+		<form method="post">
+            {% csrf_token %}
+			{{ formGrade.as_p }}
+            <input type="submit" value='Добавить' name="changeGrade">
+		</form>
+
+        <form method="post">
+            {% csrf_token %}
+			{{ formLes.as_p }}
+            <input type="submit" value='Добавить' name="addLes">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout/navigation.html" %}
+{% load static %}
+
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'ege/choice_student.css' %}">{% endblock %}
+{% block title %}Выбор урока{% endblock %}
+
+{% block content%}
+<h1>Выбор урока</h1>
+<h2>Ученик: {{student.name}}</h2>
+<p>Выберите урок ученика, который необходимо удалить</p>
+<ul>
+{% for lesson in lessonsThisStudent%}
+    <li><a href="{% url 'editLesson' %}?lesson={{lesson.number}}&student={{student.name}}">{{lesson.number}} Занятие</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

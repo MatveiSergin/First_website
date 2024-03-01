@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>{% block title %} {% endblock %}</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'ege/navigation.css' %}">
+		{% block css %}{% endblock %}
+	</head>
+	<body>
+		<div id="blocklogo"> Online School </div>
+		<header>
+			<a href="{% url 'lessons' %}" class="Head">{{subject}}</a>
+			<a href="{% url 'login' %}"><img src="{% static 'ege/login.png' %}" id="imageLogin"></a>
+			<a href="{% url 'logout' %}"><img src="{% static 'ege/logout.png' %}" id="imageLogout"></a>
+			<div id="dd">
+				<ul class="wrapper-dropdown">
+					<li><p class="main">Ученики</p>
+						<ul>
+							<li><a href="{% url 'choice' %}?action=listStudent" class="links">Список учеников</a></li>
+							<li><a href="{% url 'student_add' %}" class="links">Добавить ученика</a></li>
+							<li><a href="{% url 'choice' %}?action=deleteStudent" class="links">Удалить ученика</a></li>
+							<li><a href="{% url 'choice' %}?action=editStudent" class="links">Редактор ученика</a></li>
+						</ul>
+					</li>
+					<li><p class="main">Уроки</p>
+						<ul>
+						<li><a href="{% url 'choice' %}?action=addLesson" class="links">Добавить урок</a></li>
+							<li><a href="{% url 'choice' %}?action=deleteLesson" class="links">Удалить урок</a></li>
+							<li><a href="{% url 'choice' %}?action=choiceLesson" class="links">Редактор урок</a></li>
+						</ul>
+					</li>
+					<li><p class="Head"><a href="{% url 'profile'%}" id="username">{{username}}</a></p></li>
+				</ul>
+			</div>
+		</header>
+		<div id="leftpannel">
+			<ul id="listoflessons">
+				{% for lesson in lessons %}
+				<li><a href="{%url 'lessons' %}?num={{lesson.number}}" id="L{{lesson.number}}">Занятие {{lesson.number}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<section>{%block content%} {% endblock %}</section>
+	</body>
+</html>

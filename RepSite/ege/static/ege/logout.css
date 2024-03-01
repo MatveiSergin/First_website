@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+}
+div {
+	width: 300px;
+	height: 400px;
+	background: #d5f3ff;
+	border: 2px solid #d5f3ff;
+	margin: 10% 0% 0% 40%;
+	border-radius: 50px;
+}
+h1 {
+	font-size: 60px;
+	text-align: center;
+	padding: 50px;
+	border-bottom: 2px solid black;
+
+}
+p {
+	padding: 30px;
+	text-align: center;
+	font-size: 20px;
+	border-bottom: 2px solid black;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	margin-top: 30px;
+	border: 2px solid black;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+a:hover {
+	border: 2px dashed #2a7601;
+	background: #aaea88;
+}

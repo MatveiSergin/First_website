@@ -1,0 +1,33 @@
+{% extends "layout/navigation.html" %}
+{% load static %}
+		{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'ege/profile.css' %}">{% endblock %}
+		{% block title %} Профиль {% endblock %}
+		{% block content %}
+		<div id="main">
+			<h1 id="profile">Профиль</h1>
+			<p id="context">Привет, это твой профиль в котором расположена вся важная информация о твоем продвижении в учебе!</p>
+			<div id="grade">
+				<img src="https://papik.pro/uploads/posts/2023-01/1674308712_papik-pro-p-vosklitsatelnii-znak-risunok-41.png" width="20%" id="image_1">
+				<p>Твоя успеваемость:</p>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						{% for number in numberTask %}
+							<th>{{number}}</th>
+						{% endfor %}
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						{% for task in solvedTask%}
+							<td class="color{{task}}">{{task}}</td>
+						{% endfor %}
+					</tr>
+				</tbody>
+			</table>
+			<h3>Количество неоплаченных занятий: <p id="payment" class="data">0</p></h3>
+			<h3>Решено вариантов: <p id="num_var" class="data">10</p></h3>
+			<h3>Средний балл: <p id="score" class="data">78</p></h3>
+		</div>
+		{% endblock %}

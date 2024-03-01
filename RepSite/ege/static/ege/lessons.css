@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+#lesson {
+	display: block;
+	width: 83%;
+	height: 120px;
+	float: left;
+	font-size: 60px;
+	font-weight: 300;
+	margin: 50px;
+	margin-bottom: 	30px;
+}
+
+.mains, .data {
+	font-size: 30px;
+	position: relative;
+	right: -50px;
+	line-height: 50px;
+	display: inline;
+}
+
+.data {
+	color: green;
+}
+
+#verificationStatus {
+	color: #dcf000;
+}
+
+#lastdata {	
+	margin-bottom: 250px;
+}
+
+#date {
+	color: black;
+}	
+
+.files {
+	width: 300px;
+	height: 200px;
+	float: left;
+	text-align: center;
+	line-height: 200px;
+	font-size: 30px;
+	text-decoration: none;
+	color: black;
+	border: 2px solid black;
+	margin: 50px;
+	border-radius: 10px;
+	background: #cccccc;
+}

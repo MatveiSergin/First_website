@@ -1,0 +1,97 @@
+{% extends "layout/navigation.html" %}
+{% load static %}
+
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'ege/choice_student.css' %}">{% endblock %}
+{% block title %}Выбор ученика{% endblock %}
+
+{% block content %}
+<div id="main">
+<h1 id="listStudents">Список учеников:</h1>
+
+    {% if direction == 'addLesson'%}
+    {% for student in students %}
+        <ul class="listOfStudents">
+        <li><a href="{% url 'lesson_add' %}?student={{student.name}}" class="students">{{student.name}}</a></li>
+        </ul>
+    {% endfor %}
+    {% endif %}
+
+    {% if direction == 'listStudent' %}
+    <div id="tablesContainer"></div>
+
+  <script>
+    function createTableForString(str, index) {
+      const table = document.createElement('table');
+      const indexRow = table.insertRow();
+      const charRow = table.insertRow();
+
+      for (let i = 1; i <= str.length; i++) {
+        const indexCell = indexRow.insertCell();
+        indexCell.textContent = `${i}`;
+
+        const charCell = charRow.insertCell();
+        charCell.textContent = str[i-1];
+        charCell.classList.add(`color${str[i-1]}`);
+      }
+
+      const tablesContainer = document.getElementById('tablesContainer');
+      tablesContainer.appendChild(table);
+    }
+
+    const strings = [
+        {% for student in students %}
+         '{{student.solvedTask}}',
+         {% endfor %}
+         ];
+    const additionalData = [
+    {% for student in students %}
+        '{{student.name}}',
+    {% endfor %}
+         ];
+    for (let i = 0; i < strings.length; i++) {
+      const tablesContainer = document.getElementById('tablesContainer');
+      const additionalDataRow = document.createElement('div');
+      additionalDataRow.textContent = additionalData[i];
+      tablesContainer.appendChild(additionalDataRow);
+      createTableForString(strings[i], i);
+      }
+  </script>
+    {% endif %}
+
+    {% if direction == 'deleteStudent'%}
+    <h2 id="context">Удаление ученика.</h2>
+    {% for student in students %}
+        <ul class="listOfStudents">
+        <li><a href="{% url 'deleteStudent' %}?student={{student.name}}" class="students">{{student.name}}</a></li>
+        </ul>
+    {% endfor %}
+    {% endif %}
+
+    {% if direction == 'deleteLesson' %}
+    <h2 class="context">Удаление занятия. <br> Выберите ученика для которого нужно удалить занятие.</h2>
+    {% for student in students %}
+        <ul class="listOfStudents">
+        <li><a href="{% url 'deleteLesson' %}?student={{student.name}}" class="students">{{student.name}}</a></li>
+        </ul>
+    {% endfor %}
+    {% endif %}
+
+    {% if direction == 'choiceLesson'%}
+    <h2 class="context">Редактирование занятий</h2>
+    {% for student in students %}
+        <ul class="listOfStudents">
+        <li><a href="{% url 'choiceLesson' %}?student={{student.name}}" class="students">{{student.name}}</a></li>
+        </ul>
+    {% endfor %}
+    {% endif %}
+
+    {% if direction == 'editStudent'%}
+    <h2 class="context">Редактирование учеников</h2>
+    {% for student in students %}
+        <ul class="listOfStudents">
+        <li><a href="{% url 'editStudent' %}?student={{student.name}}" class="students">{{student.name}}</a></li>
+        </ul>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

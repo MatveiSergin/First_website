@@ -1,0 +1,11 @@
+{% extends "layout/navigation.html" %}
+{% load static %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'ege/student_add.css' %}">{% endblock %}
+		{% block title %}Успех!{% endblock %}
+{% block content %}
+    <h1>Успешно!</h1>
+    <h2>Ученик добавлен!</h2>
+    <p>Передайте логин и пароль вашему ученику для входа на сайт.</p><br>
+    <h3>Логин: {{login}}</h3>
+    <h3>Пароль: {{password}}</h3>
+{% endblock %}

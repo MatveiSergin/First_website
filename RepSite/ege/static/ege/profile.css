@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+#main {
+	float: left;
+	width: 80%;
+	padding: 20px;
+}
+
+#profile {
+	font-size: 50px;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 20px;
+}
+
+#context {
+	font-size: 20px;
+	margin-bottom: 60px;
+}
+
+#grade {
+	width: 80%;
+	height: 20px;
+	line-height: 40px;
+	font-size: 40px;
+	padding-bottom: 40px;
+}
+#image_1 {
+	width: 40px;
+	float: left;
+}
+
+table {
+	text-align: center;
+	border-collapse: separate;
+	border-spacing: 5px;
+	background: #cccccc;
+	border: 20px solid #сссссс;
+	border-radius: 15px;
+	margin-bottom: 60px;
+
+}
+
+th {
+	font-size: 20px;
+	padding: 10px 10px 5px 10px;
+}
+
+.color1 {
+	background: #10e639;
+	text-indent: -9999px;
+
+}
+
+.color0  {
+	background: red;
+	text-indent: -9999px;
+}
+
+#main h3, .data {
+	font-size: 40px;
+	line-height: 60px;
+}
+
+.data {
+	display: inline;
+	color: green;
+}

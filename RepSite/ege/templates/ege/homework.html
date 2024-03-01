@@ -1,0 +1,13 @@
+{% extends "layout/navigation.html" %}
+{% load static %}
+
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'ege/choice_student.css' %}">{% endblock %}
+{% block title %}Редактирование урока{% endblock %}
+
+{% block content%}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value='Добавить' name="lessonEdit">
+</form>
+{% endblock %}

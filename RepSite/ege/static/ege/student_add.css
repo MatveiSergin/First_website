@@ -1,0 +1,65 @@
+.form-label {
+    font-size: 30px;
+}
+#main {
+    float: left;
+    weight: 50%;
+    height: 50%;
+    margin: 20px;
+}
+input[type="text"] {
+	background-color: #eee;
+	vertical-align: top;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 10px;
+	display: inline-block;
+	width: 200px;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+input[type="text"]:focus {
+	outline: 2px solid green;
+}
+
+input[type="number"] {
+	background-color: #eee;
+	vertical-align: top;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 10px;
+	display: inline-block;
+	width: 200px;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+input[type="number"]:focus {
+	outline: 2px solid green;
+}
+
+textarea {
+    width: 500px;
+    height: 150px;
+}
+
+input[type='submit'] {
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 50px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}

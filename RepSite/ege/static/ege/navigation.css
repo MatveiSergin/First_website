@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+}
+
+#blocklogo {
+	width: 10%;
+	height: 100px;
+	float: left;
+	background: #000000;
+	color: white;
+	border-bottom: 2px solid black;
+	text-align: center;
+	line-height: 100px;
+	font-size: 25px;
+	font-family: 'Yellowtail', cursive;
+
+}
+header {
+	display: block;
+	background: #cccccc;
+	width: 90%;
+	height: 100px;
+	line-height: 100px;
+	border-bottom: 2px solid black;
+	float: left;
+}
+.Head {
+	font-size: 25px;
+	text-decoration: none;
+	color: black;
+	float: left;
+	margin-left: 60px;
+	padding: 0px 20px 0px 20px;
+}
+.Head:hover {
+	border: 2px dashed #2a7601;
+	background: #aaea88;
+}
+#name {
+    display: block;
+    float:right;
+	font-size: 25px;
+}
+
+#student_add {
+    display: block;
+    float: right;
+	font-size: 25px;
+}
+
+
+#leftpannel {
+	width: 10%;
+	height: 964px;
+	background: #cccccc;
+}
+#leftpannel {
+	width: 10%;
+	float: left;
+	border-right: 2px solid black;
+
+}
+#leftpannel ul {
+	text-align: center;
+	float: right;
+}
+
+#leftpannel ul li a {
+	text-decoration: none;
+	border: 2px solid black;
+	color: black;
+	font-size: 28px;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 65px;
+}
+#leftpannel ul li a:hover {
+	border: 2px dashed #2a7601;
+	background: #aaea88;
+}
+
+#imageLogin, #imageLogout {
+    float: right;
+    width: 2%;
+    margin: 10px;
+
+}
+
+#imageLogout {
+    margin-top: 60px;
+    position: relative;
+    right: -3.5%;
+}
+
+.wrapper-dropdown {
+    display: flex;
+}
+
+.wrapper-dropdown li {
+    width: 200px;
+    list-style: none;
+    background: #ccc;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+}
+
+.links {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 0px 10px;
+    height: 40px;
+    line-height: 40px;
+    transition: all .5s;
+}
+
+.links:hover {
+    border: 2px dashed #2a7601;
+	background: #aaea88;
+}
+
+.wrapper-dropdown ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    padding: 0;
+}
+
+.wrapper-dropdown li ul {
+    font-size: 10px;
+}
+.wrapper-dropdown li:hover ul {
+    display: block;
+}
+
+.main {
+    font-size: 25px;
+}
+.main:hover {
+    border: 2px dashed #2a7601;
+	background: #aaea88;
+}
+
+#username {
+   	font-size: 25px;
+	text-decoration: none;
+	color: black;
+}
+
+#dd {
+    display: flex;
+    position: relative;
+    }

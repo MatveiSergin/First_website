@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'ege/logout.css' %}">
+    <title>ВЫХОД С САЙТА</title>
+</head>
+<body>
+  <div>
+  <h1 class="main">Выход</h1>
+  <p class="main">Вы успешно вышли с сайта</p>
+  <a href="{% url 'login' %}" class="main">Вернуться на сайт</a>
+  </div>
+</body>
+</html>

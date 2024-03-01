@@ -1,0 +1,14 @@
+{% extends "layout/navigation.html" %}
+{% load static %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'ege/lessons.css' %}">{% endblock %}
+		{% block title %}Занятия{% endblock %}
+		{% block content %}
+		<div id="main">
+			<p id="lesson">Занятие {{les.number}}</p>
+			<p class="mains">Дата: <p class="data" id="date">{{les.date|date:"d.m.Y H:i"}}</p></p>
+			<p  class="mains">Статус оплаты: <p class="data">{{les.is_paid}}</p></p>
+			<div id="lastdata"><p  class="mains">Готовность дз: <p class="data" id="verificationStatus">{{les.is_ready}}</p></p></div>
+		</div>
+		<a href="{% url 'homework' %}?student={{username}}&lesson={{les.number}}" id="dz" class="files">Домашняя работа</a>
+		<a href="" id="materials" class="files" download>Материалы с занятия</a>
+		{% endblock %}

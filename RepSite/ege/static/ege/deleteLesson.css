@@ -1,0 +1,13 @@
+ul il a {
+    padding: 0 50px 0 50px;
+    weight: 100px;
+	text-decoration: none;
+	color: black;
+	font-size: 28px;
+	line-height: 65px;
+}
+
+ul li a:hover {
+	border: 2px dashed #2a7601;
+	background: #aaea88;
+}
